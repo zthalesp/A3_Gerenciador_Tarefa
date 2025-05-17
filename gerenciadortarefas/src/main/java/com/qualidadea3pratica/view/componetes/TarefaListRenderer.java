@@ -1,9 +1,9 @@
-package view.componetes;
+package com.qualidadea3pratica.view.componetes;
 
 import javax.swing.*;
 import java.awt.*;
-import model.tarefa;
-import model.StatusTarefa;
+import com.qualidadea3pratica.model.tarefa;
+import com.qualidadea3pratica.model.StatusTarefa;
 
 public class TarefaListRenderer extends DefaultListCellRenderer {
     @Override

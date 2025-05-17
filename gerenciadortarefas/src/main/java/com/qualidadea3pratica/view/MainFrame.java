@@ -1,10 +1,10 @@
-package view;
+package com.qualidadea3pratica.view;
 
 import javax.swing.*;
 import java.awt.*;
-import controller.TarefaController;
-import model.tarefa;
-import view.componetes.TarefaListRenderer;
+import com.qualidadea3pratica.controller.TarefaController;
+import com.qualidadea3pratica.model.tarefa;
+import com.qualidadea3pratica.view.componetes.TarefaListRenderer;
 
 public class MainFrame extends JFrame {
     private JList<tarefa> tarefasList;
