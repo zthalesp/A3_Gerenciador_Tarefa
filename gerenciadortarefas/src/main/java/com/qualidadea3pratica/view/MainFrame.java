@@ -1,10 +1,10 @@
-package view;
+package com.qualidadea3pratica.view;
 
 import javax.swing.*;
 import java.awt.*;
-import controller.TarefaController;
-import model.tarefa;
-import view.componetes.TarefaListRenderer;
+import com.qualidadea3pratica.controller.TarefaController;
+import com.qualidadea3pratica.model.tarefa;
+import com.qualidadea3pratica.view.componetes.TarefaListRenderer;
 
 public class MainFrame extends JFrame {
     private JList<tarefa> tarefasList;
@@ -17,8 +17,11 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         
-        controller = new TarefaController(this);
         initializeComponents();
+    }
+
+    public void setController(com.qualidadea3pratica.controller.TarefaController controller) {
+        this.controller = controller;
     }
 
     private void initializeComponents() {
@@ -49,9 +52,6 @@ public class MainFrame extends JFrame {
         tarefasList.setCellRenderer(new TarefaListRenderer());
         
         add(new JScrollPane(tarefasList), BorderLayout.CENTER);
-        
-        
-        controller.carregarTarefas();
     }
 
     public DefaultListModel<tarefa> getListModel() {

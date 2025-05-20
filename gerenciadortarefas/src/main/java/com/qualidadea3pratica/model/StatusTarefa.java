@@ -1,4 +1,4 @@
-package model;
+package com.qualidadea3pratica.model;
 
 public enum StatusTarefa {
     PENDENTE("Pendente"),

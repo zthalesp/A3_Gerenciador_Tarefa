@@ -1,6 +1,6 @@
-package repository;
+package com.qualidadea3pratica.repository;
 
-import model.tarefa;
+import com.qualidadea3pratica.model.tarefa;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +8,7 @@ public class TarefaRepository {
     private List<tarefa> tarefas = new ArrayList<>();
     private static TarefaRepository instance;
 
-    private TarefaRepository() {}
+    public TarefaRepository() {}
 
     public static TarefaRepository getInstance() {
         if (instance == null) {
