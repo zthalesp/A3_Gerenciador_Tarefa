@@ -8,7 +8,7 @@ public class TarefaRepository {
     private List<tarefa> tarefas = new ArrayList<>();
     private static TarefaRepository instance;
 
-    private TarefaRepository() {}
+    public TarefaRepository() {}
 
     public static TarefaRepository getInstance() {
         if (instance == null) {
