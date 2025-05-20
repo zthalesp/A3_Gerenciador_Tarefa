@@ -17,8 +17,11 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         
-        controller = new TarefaController(this);
         initializeComponents();
+    }
+
+    public void setController(com.qualidadea3pratica.controller.TarefaController controller) {
+        this.controller = controller;
     }
 
     private void initializeComponents() {
@@ -49,9 +52,6 @@ public class MainFrame extends JFrame {
         tarefasList.setCellRenderer(new TarefaListRenderer());
         
         add(new JScrollPane(tarefasList), BorderLayout.CENTER);
-        
-        
-        controller.carregarTarefas();
     }
 
     public DefaultListModel<tarefa> getListModel() {
